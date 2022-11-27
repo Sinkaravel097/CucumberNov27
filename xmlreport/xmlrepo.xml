@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="26.524643">
+<testcase classname="To validate the login functionality in fb application" name="To validate with invalid username and invalid password" time="8.075521">
+<system-out><![CDATA[When User has to launch the fb application in browser.......................passed
+And User has to pass invalid username in email field........................passed
+And User has to pass invalid password in password field.....................passed
+And User has to click the login button......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To validate the login functionality in fb application" name="To validate the positive and negative combination in login field" time="3.318293">
+<system-out><![CDATA[When User has the launch the url............................................passed
+And To pass the bulk of "selenium@gmail.com" datas to email field...........passed
+And To pass the bulk of datas to password "sel@123" field...................passed
+And To click the login button...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To validate the login functionality in fb application" name="To validate the positive and negative combination in login field 2" time="3.294068">
+<system-out><![CDATA[When User has the launch the url............................................passed
+And To pass the bulk of "java@gmail.com" datas to email field...............passed
+And To pass the bulk of datas to password "java@123" field..................passed
+And To click the login button...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To validate the login functionality in fb application" name="To validate the positive and negative combination in login field 3" time="3.34002">
+<system-out><![CDATA[When User has the launch the url............................................passed
+And To pass the bulk of "python@gmail.com" datas to email field.............passed
+And To pass the bulk of datas to password "python@123" field................passed
+And To click the login button...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To validate the login functionality in fb application" name="To validate the positive and negative combination in login field 4" time="3.500876">
+<system-out><![CDATA[When User has the launch the url............................................passed
+And To pass the bulk of "sql@gmail.com" datas to email field................passed
+And To pass the bulk of datas to password "sql@123" field...................passed
+And To click the login button...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To validate the login functionality of amazon application" name="To validate login with valid username and invalid password" time="4.995865">
+<system-out><![CDATA[When To launch the amz application..........................................passed
+When To pass valid username in email field..................................passed
+And To click the continue button............................................passed
+And To enter the invalid password in password field.........................passed
+And To click the signin button..............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

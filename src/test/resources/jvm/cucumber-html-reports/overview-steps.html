@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Facebook &amp; Amazon</td>
+            <td>27 Nov 2022, 09:13</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">AmazonTask.toClickTheSigninButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="130065600">0.130</td>
+              <td class="duration" data-value="130065600">0.130</td>
+              <td class="duration" data-value="130065600">0.130</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AmazonTask.to_click_the_continue_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="971985100">0.971</td>
+              <td class="duration" data-value="971985100">0.971</td>
+              <td class="duration" data-value="971985100">0.971</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AmazonTask.to_enter_the_invalid_password_in_password_field(DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="123086600">0.123</td>
+              <td class="duration" data-value="123086600">0.123</td>
+              <td class="duration" data-value="123086600">0.123</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AmazonTask.to_launch_the_amz_application()</td>
+              <td>1</td>
+              <td class="duration" data-value="1544391400">1.544</td>
+              <td class="duration" data-value="1544391400">1.544</td>
+              <td class="duration" data-value="1544391400">1.544</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AmazonTask.to_pass_valid_username_in_email_field(DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="110386300">0.110</td>
+              <td class="duration" data-value="110386300">0.110</td>
+              <td class="duration" data-value="110386300">0.110</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">FacebookTask.user_has_to_click_the_login_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="100710200">0.100</td>
+              <td class="duration" data-value="100710200">0.100</td>
+              <td class="duration" data-value="100710200">0.100</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">FacebookTask.user_has_to_launch_the_fb_application_in_browser()</td>
+              <td>1</td>
+              <td class="duration" data-value="1385460500">1.385</td>
+              <td class="duration" data-value="1385460500">1.385</td>
+              <td class="duration" data-value="1385460500">1.385</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">FacebookTask.user_has_to_pass_invalid_password_in_password_field()</td>
+              <td>1</td>
+              <td class="duration" data-value="104654200">0.104</td>
+              <td class="duration" data-value="104654200">0.104</td>
+              <td class="duration" data-value="104654200">0.104</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">FacebookTask.user_has_to_pass_invalid_username_in_email_field()</td>
+              <td>1</td>
+              <td class="duration" data-value="178874700">0.178</td>
+              <td class="duration" data-value="178874700">0.178</td>
+              <td class="duration" data-value="178874700">0.178</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.postCondition1()</td>
+              <td>6</td>
+              <td class="duration" data-value="691887800">0.691</td>
+              <td class="duration" data-value="691887800">0.733</td>
+              <td class="duration" data-value="4151326800">4.151</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.postCondition2(Scenario)</td>
+              <td>6</td>
+              <td class="duration" data-value="42466">0.000</td>
+              <td class="duration" data-value="42466">0.000</td>
+              <td class="duration" data-value="254800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.preCondition1()</td>
+              <td>6</td>
+              <td class="duration" data-value="140237616">0.140</td>
+              <td class="duration" data-value="140237616">0.164</td>
+              <td class="duration" data-value="841425700">0.841</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.preCondition2()</td>
+              <td>6</td>
+              <td class="duration" data-value="1909348966">1.909</td>
+              <td class="duration" data-value="1909348966">5.440</td>
+              <td class="duration" data-value="11456093800">11.456</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">HooksClass.preCondition3()</td>
+              <td>6</td>
+              <td class="duration" data-value="77250">0.000</td>
+              <td class="duration" data-value="77250">0.000</td>
+              <td class="duration" data-value="463500">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PositiveAndNegative.to_click_the_login_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="79264975">0.079</td>
+              <td class="duration" data-value="79264975">0.101</td>
+              <td class="duration" data-value="317059900">0.317</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PositiveAndNegative.to_pass_the_bulk_of_datas_to_email_field(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="83496125">0.083</td>
+              <td class="duration" data-value="83496125">0.094</td>
+              <td class="duration" data-value="333984500">0.333</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PositiveAndNegative.to_pass_the_bulk_of_datas_to_password_field(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="108286025">0.108</td>
+              <td class="duration" data-value="108286025">0.121</td>
+              <td class="duration" data-value="433144100">0.433</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">PositiveAndNegative.user_has_the_launch_the_url()</td>
+              <td>4</td>
+              <td class="duration" data-value="1083757575">1.083</td>
+              <td class="duration" data-value="1083757575">1.124</td>
+              <td class="duration" data-value="4335030300">4.335</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>18</td>
+            <td>55</td>
+            <td class="duration">0.482</td>
+            <td class="duration">11.456</td>
+            <td class="duration">26.518</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
